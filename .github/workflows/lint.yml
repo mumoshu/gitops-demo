@@ -11,4 +11,8 @@ jobs:
     steps:
     - name: conflint
       run: |
+        pwd
+        ls -lah
+        apt-get update -y
+        apt-get install git -y
         conflint run -efm "%f:%l:%c: %m" | reviewdog -efm="%f:%l:%c: %m" -reporter=github-pr-check
