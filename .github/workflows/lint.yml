@@ -20,7 +20,7 @@ jobs:
         apt-get install git -y
         git rev-parse --show-prefix
         export CONFLINT_LOG=DBEUG
-        conflint run -efm "%f:%l:%c: %m"
-        kubeval flux/deployment.yaml
-        kubeval flux/deployment.yaml -o json
+        conflint run -efm "%f:%l:%c: %m" || true
+        kubeval flux/deployment.yaml || true
+        kubeval flux/deployment.yaml -o json || true
         conflint run -efm "%f:%l:%c: %m" | reviewdog -efm="%f:%l:%c: %m" -reporter=github-pr-check -tee
