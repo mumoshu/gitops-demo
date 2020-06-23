@@ -1,3 +1,4 @@
 kubeval:
 - files:
   - flux/*.yaml
+  ignoreMissingSchemas: true
