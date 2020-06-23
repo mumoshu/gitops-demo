@@ -5,7 +5,7 @@ metadata:
   name: helm-operator
   namespace: flux
 spec:
-  replicas: 1
+  replicas: xx
   selector:
     matchLabels:
       name: helm-operator
