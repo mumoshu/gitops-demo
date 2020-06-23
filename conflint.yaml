@@ -1,0 +1,3 @@
+kubeval:
+- files:
+  - flux/*.yaml
